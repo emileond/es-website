@@ -9,47 +9,26 @@ import {
   Heading,
   Section,
   Grid,
+  Separator,
 } from '@radix-ui/themes'
-import Image from 'next/image'
-import { FaBeer } from 'react-icons/fa'
+import Nav from '../components/Nav'
+import AboutMe from '../components/AboutMe'
+import Experience from '../components/Experience'
+import Portfolio from '../components/Portfolio'
+import Projects from '../components/Projects'
+import DreamList from '../components/DreamList'
 
 export default function Home() {
   return (
-    <Container size="4">
-      <Section>
-        <Flex gap="2" direction="column">
-          <Heading>Hi, I'm Emilio</Heading>
-          <Text>
-            I'm a product designer and developer. Currently working at Zenput.
-            I'm passionate about building products that are simple, intuitive,
-            and delightful to use.
-          </Text>
-          <Flex>
-            <FaBeer />
-            <FaBeer />
-          </Flex>
-        </Flex>
-      </Section>
-      <Section>
-        <Heading size="4">Work</Heading>
-        <Flex gap="3" width="100%" wrap="wrap">
-          <Card>Project X</Card>
-          <Card>Project X</Card>
-          <Card>Project X</Card>
-          <Card>Project X</Card>
-          <Card>Project X</Card>
-          <Card>Project X</Card>
-        </Flex>
-      </Section>
-      <Section>
-        <Heading size="4">Portfolio</Heading>
-      </Section>
-      <Section>
-        <Heading size="4">Personal projects</Heading>
-      </Section>
-      <Section>
-        <Heading size="4">Dream list</Heading>
-      </Section>
-    </Container>
+    <>
+      <Nav />
+      <Container size="4">
+        <AboutMe />
+        <Experience />
+        <Portfolio />
+        <Projects />
+        <DreamList />
+      </Container>
+    </>
   )
 }
